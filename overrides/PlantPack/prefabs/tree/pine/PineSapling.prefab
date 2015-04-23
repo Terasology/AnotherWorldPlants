@@ -1,0 +1,9 @@
+{
+  "LivingPlant": {
+    "type": "PlantPack:pine"
+  },
+  "PlantedSapling": {},
+  "PartOfTree": {
+    "part": "SAPLING"
+  }
+}

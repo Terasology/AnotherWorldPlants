@@ -1,0 +1,9 @@
+{
+  "LivingPlant": {
+    "type": "PlantPack:cypress"
+  },
+  "PlantedSapling": {},
+  "PartOfTree": {
+    "part": "SAPLING"
+  }
+}

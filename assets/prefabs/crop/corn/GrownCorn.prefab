@@ -1,0 +1,8 @@
+{
+  "LivingPlant": {
+    "type": "PlantPack:corn"
+  },
+  "BlockDropGrammar": {
+    "itemDrops": ["3-5*PlantPack:CornFruit"]
+  }
+}
