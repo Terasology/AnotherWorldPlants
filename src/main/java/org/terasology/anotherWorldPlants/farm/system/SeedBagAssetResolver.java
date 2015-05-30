@@ -15,47 +15,69 @@
  */
 package org.terasology.anotherWorldPlants.farm.system;
 
-import org.terasology.asset.AssetFactory;
-import org.terasology.asset.AssetResolver;
-import org.terasology.asset.AssetType;
-import org.terasology.asset.AssetUri;
-import org.terasology.asset.Assets;
+import com.google.common.collect.ImmutableSet;
+import org.terasology.assets.AssetDataProducer;
+import org.terasology.assets.ResourceUrn;
+import org.terasology.assets.management.AssetManager;
+import org.terasology.assets.module.annotations.RegisterAssetDataProducer;
 import org.terasology.naming.Name;
 import org.terasology.rendering.assets.texture.Texture;
 import org.terasology.rendering.assets.texture.TextureData;
+import org.terasology.rendering.assets.texture.TextureRegionAsset;
 import org.terasology.rendering.assets.texture.TextureUtil;
 
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.Set;
 
-public class SeedBagAssetResolver implements AssetResolver<Texture, TextureData> {
+@RegisterAssetDataProducer
+public class SeedBagAssetResolver implements AssetDataProducer<TextureData> {
     private static final Name PLANT_PACK_MODULE = new Name("anotherworldplants");
 
-    @Override
-    public AssetUri resolve(Name partialUri) {
-        String[] parts = partialUri.toString().split("\\(", 2);
-        if (parts.length > 1) {
-            AssetUri uri = Assets.resolveAssetUri(AssetType.TEXTURE, parts[0]);
-            if (uri != null) {
-                return new AssetUri(AssetType.TEXTURE, uri.getModuleName(), partialUri);
-            }
-        }
-        return null;
+    private AssetManager assetManager;
+
+    public SeedBagAssetResolver(AssetManager assetManager) {
+        this.assetManager = assetManager;
     }
 
     @Override
-    public Texture resolve(AssetUri uri, AssetFactory<TextureData, Texture> factory) {
-        final String assetName = uri.getAssetName().toString().toLowerCase();
-        if (!PLANT_PACK_MODULE.equals(uri.getModuleName())
+    public Set<ResourceUrn> getAvailableAssetUrns() {
+        return Collections.emptySet();
+    }
+
+    @Override
+    public Set<Name> getModulesProviding(Name resourceName) {
+        if (!resourceName.toLowerCase().startsWith("seedbag(")) {
+            return Collections.emptySet();
+        }
+        return ImmutableSet.of(PLANT_PACK_MODULE);
+    }
+
+    @Override
+    public ResourceUrn redirect(ResourceUrn urn) {
+        return urn;
+    }
+
+    @Override
+    public Optional<TextureData> getAssetData(ResourceUrn urn) throws IOException {
+        final String assetName = urn.getResourceName().toString().toLowerCase();
+        if (!PLANT_PACK_MODULE.equals(urn.getModuleName())
                 || !assetName.startsWith("seedbag(")) {
-            return null;
+            return Optional.empty();
         }
         String[] split = assetName.split("\\(", 2);
 
-        BufferedImage resultImage = TextureUtil.convertToImage(Assets.getTextureRegion("AnotherWorldPlants:farming.Pouch"));
-        BufferedImage seedTexture = TextureUtil.convertToImage(Assets.getTextureRegion(split[1].substring(0, split[1].length() - 1)));
+        Optional<TextureRegionAsset> resultImageAsset = assetManager.getAsset("AnotherWorldPlants:farming.Pouch",
+                TextureRegionAsset.class);
+        BufferedImage resultImage = TextureUtil.convertToImage(resultImageAsset.get());
+        Optional<TextureRegionAsset> seedTextureAsset = assetManager.getAsset(
+                split[1].substring(0, split[1].length() - 1), TextureRegionAsset.class);
+        BufferedImage seedTexture = TextureUtil.convertToImage(seedTextureAsset.get());
 
         Graphics2D gr = (Graphics2D) resultImage.getGraphics();
         try {
@@ -70,6 +92,9 @@ public class SeedBagAssetResolver implements AssetResolver<Texture, TextureData>
         }
 
         final ByteBuffer byteBuffer = TextureUtil.convertToByteBuffer(resultImage);
-        return factory.buildAsset(uri, new TextureData(resultImage.getWidth(), resultImage.getHeight(), new ByteBuffer[]{byteBuffer}, Texture.WrapMode.REPEAT, Texture.FilterMode.NEAREST));
+        return Optional.of(new TextureData(resultImage.getWidth(), resultImage.getHeight(),
+                new ByteBuffer[]{byteBuffer}, Texture.WrapMode.REPEAT, Texture.FilterMode.NEAREST));
     }
+
+
 }

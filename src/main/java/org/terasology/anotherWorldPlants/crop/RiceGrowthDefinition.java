@@ -61,13 +61,13 @@ public class RiceGrowthDefinition extends AdvancedStagesGrowthDefinition {
                     }
                 },
                 Arrays.asList(
-                        new BlockUri("PlantPack", "Rice1"), new BlockUri("PlantPack", "Rice2"), new BlockUri("PlantPack", "Rice3"),
-                        new BlockUri("PlantPack", "Rice4")),
+                        new BlockUri("PlantPack:Rice1"), new BlockUri("PlantPack:Rice2"), new BlockUri("PlantPack:Rice3"),
+                        new BlockUri("PlantPack:Rice4")),
                 new Predicate<LocalParameters>() {
                     @Override
                     public boolean apply(LocalParameters input) {
                         return input.getHumidity() < 0.4f || input.getTemperature() < 5f;
                     }
-                }, new BlockUri("PlantPack", "DeadBush"));
+                }, new BlockUri("PlantPack:DeadBush"));
     }
 }

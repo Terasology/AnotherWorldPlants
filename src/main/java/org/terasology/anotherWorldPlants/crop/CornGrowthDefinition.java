@@ -61,14 +61,14 @@ public class CornGrowthDefinition extends AdvancedStagesGrowthDefinition {
                     }
                 },
                 Arrays.asList(
-                        new BlockUri("PlantPack", "Corn1"), new BlockUri("PlantPack", "Corn2"), new BlockUri("PlantPack", "Corn3"),
-                        new BlockUri("PlantPack", "Corn4"), new BlockUri("PlantPack", "Corn5"), new BlockUri("PlantPack", "Corn6"),
-                        new BlockUri("PlantPack", "Corn7")),
+                        new BlockUri("PlantPack:Corn1"), new BlockUri("PlantPack:Corn2"), new BlockUri("PlantPack:Corn3"),
+                        new BlockUri("PlantPack:Corn4"), new BlockUri("PlantPack:Corn5"), new BlockUri("PlantPack:Corn6"),
+                        new BlockUri("PlantPack:Corn7")),
                 new Predicate<LocalParameters>() {
                     @Override
                     public boolean apply(LocalParameters input) {
                         return input.getHumidity() < 0.2f || input.getTemperature() < 0f;
                     }
-                }, new BlockUri("PlantPack", "DeadBush"));
+                }, new BlockUri("PlantPack:DeadBush"));
     }
 }
