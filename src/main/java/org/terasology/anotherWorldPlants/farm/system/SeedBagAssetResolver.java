@@ -72,7 +72,7 @@ public class SeedBagAssetResolver implements AssetDataProducer<TextureData> {
         }
         String[] split = assetName.split("\\(", 2);
 
-        Optional<TextureRegionAsset> resultImageAsset = assetManager.getAsset("AnotherWorldPlants:farming.Pouch",
+        Optional<TextureRegionAsset> resultImageAsset = assetManager.getAsset("AnotherWorldPlants:farming#Pouch",
                 TextureRegionAsset.class);
         BufferedImage resultImage = TextureUtil.convertToImage(resultImageAsset.get());
         Optional<TextureRegionAsset> seedTextureAsset = assetManager.getAsset(
