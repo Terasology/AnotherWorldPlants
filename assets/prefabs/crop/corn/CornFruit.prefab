@@ -1,8 +1,8 @@
 {
   "parent": "engine:iconItem",
   "Item": {
-    "icon": "PlantPack:items.Corn",
-    "stackId": "PlantPack:items.Corn",
+    "icon": "PlantPack:items#Corn",
+    "stackId": "PlantPack:items#Corn",
     "renderWithIcon": true
   },
   "DisplayName": {
