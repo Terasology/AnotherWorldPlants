@@ -2,7 +2,6 @@
   "parent": "engine:iconItem",
   "Item": {
     "stackId": "PlantPack:items#RiceSeed",
-    "renderWithIcon": true,
     "consumedOnUse": true
   },
   "DisplayName": {
