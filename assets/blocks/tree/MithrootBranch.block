@@ -5,7 +5,7 @@
     "prefab": "GrowingFlora:TreeBranch"
   },
   "sounds": "Core:wood",
-  "rotation": "GrowingFlora:branch",
+  "family": "GrowingFlora:branch",
   "no_connections": {
     "shape": "GrowingFlora:BranchNoCon"
   },
