@@ -3,6 +3,6 @@
   "entity": {
     "prefab": "GrowingFlora:TreeBranch"
   },
-  "sounds": "Core:wood",
+  "sounds": "CoreAssets:wood",
   "family": "GrowingFlora:branch"
 }

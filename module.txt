@@ -1,11 +1,12 @@
 {
     "id" : "AnotherWorldPlants",
-    "version" : "0.1.2-SNAPSHOT",
+    "version" : "0.1.3-SNAPSHOT",
     "author" : "Marcin Sciesinski <marcins78@gmail.com>, Esa-Petri",
     "displayName" : "AnotherWorldPlants",
     "description" : "Farming and tree growth for AnotherWorld",
     "dependencies" : [
         {"id" : "Core", "minVersion" : "2.0.0"},
+        {"id" : "CoreAssets", "minVersion" : "1.0.0"},
         {"id" : "AnotherWorld", "minVersion" : "0.2.0"},
         {"id" : "GrowingFlora", "minVersion" : "0.1.0"},
         {"id" : "PlantPack", "minVersion" : "1.0.0"},
