@@ -10,7 +10,7 @@
         {"id" : "AnotherWorld", "minVersion" : "0.2.0"},
         {"id" : "GrowingFlora", "minVersion" : "0.1.0"},
         {"id" : "PlantPack", "minVersion" : "1.0.0"},
-        {"id" : "StructuralResources", "minVersion" : "1.0.0"}
+        {"id" : "StructuralResources", "minVersion" : "2.0.0"}
     ],
     "isServerSideOnly" : false
  }
