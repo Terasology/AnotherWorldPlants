@@ -5,7 +5,7 @@
     "displayName" : "AnotherWorldPlants",
     "description" : "Farming and tree growth for AnotherWorld",
     "dependencies" : [
-        {"id" : "Core", "minVersion" : "2.0.0"},
+        {"id" : "Core", "minVersion" : "3.0.0"},
         {"id" : "CoreAssets", "minVersion" : "1.0.0"},
         {"id" : "AnotherWorld", "minVersion" : "0.2.0"},
         {"id" : "GrowingFlora", "minVersion" : "0.1.0"},
