@@ -1,17 +1,18 @@
 {
-    "id" : "AnotherWorldPlants",
-    "version" : "0.2.0",
-    "author" : "Marcin Sciesinski <marcins78@gmail.com>, Esa-Petri",
-    "displayName" : "AnotherWorldPlants",
-    "description" : "Farming and tree growth for AnotherWorld",
-    "dependencies" : [
-        {"id" : "CoreAssets", "minVersion" : "1.0.0"},
-        {"id" : "AnotherWorld", "minVersion" : "0.2.0"},
-        {"id" : "GrowingFlora", "minVersion" : "0.1.0"},
-        {"id" : "PlantPack", "minVersion" : "1.0.0"},
-        {"id" : "StructuralResources", "minVersion" : "2.0.0"},
-        {"id" : "Inventory", "minVersion" : "1.1.0"}
+    "id": "AnotherWorldPlants",
+    "version": "1.0.0",
+    "author": "Marcin Sciesinski <marcins78@gmail.com>, Esa-Petri",
+    "displayName": "AnotherWorldPlants",
+    "description": "Farming and tree growth for AnotherWorld",
+    "dependencies": [
+        { "id": "AnotherWorld", "minVersion": "0.2.0" },
+        { "id": "CoreAssets", "minVersion": "2.0.1" },
+        { "id": "Drops", "minVersion": "1.0.1" },
+        { "id": "GrowingFlora", "minVersion": "0.1.0" },
+        { "id": "PlantPack", "minVersion": "1.0.0" },
+        { "id": "StructuralResources", "minVersion": "2.0.0" }
     ],
-    "isServerSideOnly" : false,
-    "isAsset": true
+    "isServerSideOnly": false,
+    "isAsset": true,
+    "isLibrary": true
  }
