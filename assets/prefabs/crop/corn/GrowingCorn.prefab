@@ -2,5 +2,5 @@
   "LivingPlant": {
     "type": "PlantPack:corn"
   },
-  "BlockDropGrammar": {}
+  "DropGrammar": {}
 }

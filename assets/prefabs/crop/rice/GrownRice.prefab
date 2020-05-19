@@ -2,7 +2,7 @@
   "LivingPlant": {
     "type": "PlantPack:rice"
   },
-  "BlockDropGrammar": {
+  "DropGrammar": {
     "itemDrops": ["3-5*PlantPack:RiceFruit"]
   }
 }
