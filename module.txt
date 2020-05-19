@@ -2,7 +2,7 @@
     "id": "AnotherWorldPlants",
     "version": "1.0.0",
     "author": "Marcin Sciesinski <marcins78@gmail.com>, Esa-Petri",
-    "displayName": "AnotherWorldPlants",
+    "displayName": "Another World - Plants",
     "description": "Farming and tree growth for AnotherWorld",
     "dependencies": [
         { "id": "AnotherWorld", "minVersion": "1.0.0" },
