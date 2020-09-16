@@ -5,16 +5,16 @@ package org.terasology.anotherWorldPlants.tree;
 import com.google.common.collect.Maps;
 import org.terasology.engine.utilities.random.Random;
 import org.terasology.engine.world.generator.plugin.RegisterPlugin;
-import org.terasology.gf.tree.PartOfTreeComponent;
-import org.terasology.gf.tree.lsystem.AdvanceAxionElementGeneration;
-import org.terasology.gf.tree.lsystem.AdvancedLSystemTreeDefinition;
-import org.terasology.gf.tree.lsystem.AxionElementGeneration;
-import org.terasology.gf.tree.lsystem.AxionElementReplacement;
-import org.terasology.gf.tree.lsystem.DefaultAxionElementGeneration;
-import org.terasology.gf.tree.lsystem.LSystemBasedTreeGrowthDefinition;
-import org.terasology.gf.tree.lsystem.SimpleAxionElementReplacement;
-import org.terasology.gf.tree.lsystem.SurroundAxionElementGeneration;
-import org.terasology.gf.tree.lsystem.TreeBlockDefinition;
+import org.terasology.growingflora.tree.PartOfTreeComponent;
+import org.terasology.growingflora.tree.lsystem.AdvanceAxionElementGeneration;
+import org.terasology.growingflora.tree.lsystem.AdvancedLSystemTreeDefinition;
+import org.terasology.growingflora.tree.lsystem.AxionElementGeneration;
+import org.terasology.growingflora.tree.lsystem.AxionElementReplacement;
+import org.terasology.growingflora.tree.lsystem.DefaultAxionElementGeneration;
+import org.terasology.growingflora.tree.lsystem.LSystemBasedTreeGrowthDefinition;
+import org.terasology.growingflora.tree.lsystem.SimpleAxionElementReplacement;
+import org.terasology.growingflora.tree.lsystem.SurroundAxionElementGeneration;
+import org.terasology.growingflora.tree.lsystem.TreeBlockDefinition;
 
 import java.util.Map;
 

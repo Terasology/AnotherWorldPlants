@@ -19,7 +19,7 @@ import org.terasology.engine.world.WorldProvider;
 import org.terasology.engine.world.block.Block;
 import org.terasology.engine.world.block.BlockComponent;
 import org.terasology.engine.world.block.entity.placement.PlaceBlocks;
-import org.terasology.gf.grass.GetGrowthChance;
+import org.terasology.growingflora.grass.GetGrowthChance;
 import org.terasology.math.geom.Vector3f;
 import org.terasology.math.geom.Vector3i;
 

@@ -10,8 +10,8 @@ import org.terasology.engine.entitySystem.systems.RegisterMode;
 import org.terasology.engine.entitySystem.systems.RegisterSystem;
 import org.terasology.engine.registry.In;
 import org.terasology.engine.world.BlockEntityRegistry;
-import org.terasology.gf.LivingPlantComponent;
-import org.terasology.gf.PlantedSaplingComponent;
+import org.terasology.growingflora.LivingPlantComponent;
+import org.terasology.growingflora.PlantedSaplingComponent;
 import org.terasology.math.geom.Vector3i;
 
 /**

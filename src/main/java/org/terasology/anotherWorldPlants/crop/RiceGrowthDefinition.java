@@ -7,7 +7,7 @@ import com.google.common.base.Predicate;
 import org.terasology.anotherWorld.LocalParameters;
 import org.terasology.engine.world.block.BlockUri;
 import org.terasology.engine.world.generator.plugin.RegisterPlugin;
-import org.terasology.gf.grass.AdvancedStagesGrowthDefinition;
+import org.terasology.growingflora.grass.AdvancedStagesGrowthDefinition;
 
 import java.util.Arrays;
 
