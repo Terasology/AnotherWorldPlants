@@ -26,6 +26,7 @@ import org.terasology.entitySystem.systems.RegisterMode;
 import org.terasology.entitySystem.systems.RegisterSystem;
 import org.terasology.gf.grass.GetGrowthChance;
 import org.terasology.logic.common.ActivateEvent;
+import org.terasology.math.JomlUtil;
 import org.terasology.math.Side;
 import org.terasology.math.geom.Vector3f;
 import org.terasology.math.geom.Vector3i;
@@ -56,7 +57,7 @@ public class FarmAuthoritySystem extends BaseComponentSystem {
             item.send(plantEvent);
             if (!plantEvent.isConsumed()) {
                 Block blockPlaced = seed.blockPlaced;
-                Vector3f location = event.getTargetLocation();
+                Vector3f location = JomlUtil.from(event.getTargetLocation());
                 Vector3i blockLocation = new Vector3i(location.x + 0.5f, location.y + 1.5f, location.z + 0.5f);
                 PlaceBlocks placeBlocks = new PlaceBlocks(blockLocation, blockPlaced);
                 worldProvider.getWorldEntity().send(placeBlocks);
