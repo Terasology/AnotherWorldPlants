@@ -59,7 +59,7 @@ public class FarmAuthoritySystem extends BaseComponentSystem {
                 Block blockPlaced = seed.blockPlaced;
                 Vector3f location = JomlUtil.from(event.getTargetLocation());
                 Vector3i blockLocation = new Vector3i(location.x + 0.5f, location.y + 1.5f, location.z + 0.5f);
-                PlaceBlocks placeBlocks = new PlaceBlocks(blockLocation, blockPlaced);
+                PlaceBlocks placeBlocks = new PlaceBlocks(JomlUtil.from(blockLocation), blockPlaced);
                 worldProvider.getWorldEntity().send(placeBlocks);
                 if (!placeBlocks.isConsumed()) {
                     item.send(new SeedPlanted(blockLocation));
