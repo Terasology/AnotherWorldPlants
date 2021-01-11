@@ -41,8 +41,8 @@ public class FarmAuthoritySystem extends BaseComponentSystem {
             item.send(plantEvent);
             if (!plantEvent.isConsumed()) {
                 Block blockPlaced = seed.blockPlaced;
-                Vector3f location = event.getTargetLocation();
-                Vector3i blockLocation = new Vector3i(new Vector3f(location.x + 0.5f, location.y + 1.5f, location.z + 0.5f), RoundingMode.FLOOR);
+                Vector3f location = event.getTargetLocation().add(0.5f, 1.5f, 0.5f, new Vector3f());
+                Vector3i blockLocation = new Vector3i(location, RoundingMode.FLOOR);
                 PlaceBlocks placeBlocks = new PlaceBlocks(blockLocation, blockPlaced);
                 worldProvider.getWorldEntity().send(placeBlocks);
                 if (!placeBlocks.isConsumed()) {
