@@ -15,8 +15,8 @@
  */
 package org.terasology.anotherWorldPlants.farm.component;
 
-import org.terasology.entitySystem.Component;
-import org.terasology.world.block.Block;
+import org.terasology.engine.entitySystem.Component;
+import org.terasology.engine.world.block.Block;
 
 /**
  * @author Marcin Sciesinski <marcins78@gmail.com>

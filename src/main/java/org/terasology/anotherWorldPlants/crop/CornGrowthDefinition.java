@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 package org.terasology.anotherWorldPlants.crop;
 
+import org.terasology.engine.world.block.BlockUri;
+import org.terasology.engine.world.generator.plugin.RegisterPlugin;
 import org.terasology.gf.grass.AdvancedStagesGrowthDefinition;
-import org.terasology.world.block.BlockUri;
-import org.terasology.world.generator.plugin.RegisterPlugin;
 
 import java.util.Arrays;
 

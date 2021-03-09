@@ -16,6 +16,8 @@
 package org.terasology.anotherWorldPlants.tree;
 
 import com.google.common.collect.Maps;
+import org.terasology.engine.utilities.random.Random;
+import org.terasology.engine.world.generator.plugin.RegisterPlugin;
 import org.terasology.gf.tree.PartOfTreeComponent;
 import org.terasology.gf.tree.lsystem.AdvancedLSystemTreeDefinition;
 import org.terasology.gf.tree.lsystem.AxionElementGeneration;
@@ -28,8 +30,6 @@ import org.terasology.gf.tree.lsystem.SimpleAxionElementReplacement;
 import org.terasology.gf.tree.lsystem.SurroundAxionElementGeneration;
 import org.terasology.gf.tree.lsystem.SurroundLengthAxionElementGeneration;
 import org.terasology.gf.tree.lsystem.TreeBlockDefinition;
-import org.terasology.utilities.random.Random;
-import org.terasology.world.generator.plugin.RegisterPlugin;
 
 import java.util.Map;
 
