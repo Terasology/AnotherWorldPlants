@@ -11,7 +11,7 @@ public class FarmSoilComponent implements Component<FarmSoilComponent> {
     public float growChanceMultiplier;
 
     @Override
-    public void copy(FarmSoilComponent other) {
+    public void copyFrom(FarmSoilComponent other) {
         this.growChanceMultiplier = other.growChanceMultiplier;
     }
 }

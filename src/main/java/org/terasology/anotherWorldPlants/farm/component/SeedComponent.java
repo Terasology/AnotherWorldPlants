@@ -12,7 +12,7 @@ public class SeedComponent implements Component<SeedComponent> {
     public Block blockPlaced;
 
     @Override
-    public void copy(SeedComponent other) {
+    public void copyFrom(SeedComponent other) {
         this.blockPlaced = other.blockPlaced;
     }
 }
