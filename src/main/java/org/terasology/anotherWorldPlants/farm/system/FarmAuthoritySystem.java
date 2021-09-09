@@ -10,7 +10,6 @@ import org.terasology.anotherWorldPlants.farm.component.SeedComponent;
 import org.terasology.anotherWorldPlants.farm.event.BeforeSeedPlanted;
 import org.terasology.anotherWorldPlants.farm.event.SeedPlanted;
 import org.terasology.engine.entitySystem.entity.EntityRef;
-import org.terasology.engine.entitySystem.event.ReceiveEvent;
 import org.terasology.engine.entitySystem.systems.BaseComponentSystem;
 import org.terasology.engine.entitySystem.systems.RegisterMode;
 import org.terasology.engine.entitySystem.systems.RegisterSystem;
@@ -22,6 +21,7 @@ import org.terasology.engine.world.WorldProvider;
 import org.terasology.engine.world.block.Block;
 import org.terasology.engine.world.block.BlockComponent;
 import org.terasology.engine.world.block.entity.placement.PlaceBlocks;
+import org.terasology.gestalt.entitysystem.event.ReceiveEvent;
 import org.terasology.gf.grass.GetGrowthChance;
 
 @RegisterSystem(RegisterMode.AUTHORITY)
